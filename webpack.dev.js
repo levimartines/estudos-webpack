@@ -3,8 +3,10 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
     mode: 'development',
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './dist',
+    entry: {
+        home: './src/js/app.js'
     },
+    output: {
+        filename: './dist/bundle.js'
+    }
 });
